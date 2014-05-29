@@ -1,3 +1,4 @@
-default['mysql']['server_root_password'] = 'root'
-default['mysql']['allow_remote_root'] = true
-
+default['java']['install_flavor'] = "oracle"
+default['java']['jdk_version'] = "7"
+default['java']['oracle']['accept_oracle_download_terms'] = true
+default['jenkins']['master']['install_method'] = "package"

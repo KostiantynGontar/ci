@@ -10,5 +10,5 @@ package "vim" do
   action :install
 end
 
-include_recipe "java" 
-include_recipe "jenkins" 
+include_recipe "java"
+include_recipe "jenkins::master" 

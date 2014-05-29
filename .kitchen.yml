@@ -24,6 +24,7 @@ suites:
   - name: default
     run_list:
     - recipe[ci]
+    - recipe[minitest-handler]
     attributes:
     excludes:
     - freebsd-9.2
