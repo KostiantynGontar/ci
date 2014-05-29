@@ -23,12 +23,7 @@ platforms:
 suites:
   - name: default
     run_list:
-    - recipe[core]
-    - recipe[minitest-handler]
-    attributes:
-  - name: jenkins
-    run_list:
-    - recipe[core::jenkins]
+    - recipe[ci]
     attributes:
     excludes:
     - freebsd-9.2

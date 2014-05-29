@@ -1,12 +1,13 @@
 require 'chefspec'
 require 'chefspec/berkshelf'
 
-describe 'core::default' do
+describe 'ci::default' do
 
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
-  it 'update ports' do 
-    expect(chef_run).to include_recipe('freebsd::portsnap')
+  it 'install Jenkins with java' do 
+    expect(chef_run).to include_recipe('java')
+    expect(chef_run).to include_recipe('jenkins::master')
   end
 
   it 'installs vim' do
