@@ -6,9 +6,12 @@
 #
 # All rights reserved - Do Not Redistribute
 
-package "vim" do
-  action :install
+node['ci']['package_list'].each do |pkg|
+  package pkg do
+    action :install
+  end
 end
 
 include_recipe "java"
 include_recipe "jenkins::master" 
+include_recipe "git"
