@@ -15,3 +15,4 @@ end
 include_recipe "java"
 include_recipe "jenkins::master" 
 include_recipe "git"
+include_recipe "ant"

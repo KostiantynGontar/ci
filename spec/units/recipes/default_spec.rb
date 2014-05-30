@@ -15,6 +15,7 @@ describe 'ci::default' do
     expect(chef_run).to include_recipe('java')
     expect(chef_run).to include_recipe('jenkins::master')
     expect(chef_run).to include_recipe('git')
+    expect(chef_run).to include_recipe('ant')
   end
 
 end

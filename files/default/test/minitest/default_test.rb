@@ -13,6 +13,10 @@ describe_recipe 'ci::default' do
     it "install jenkins" do
       package("jenkins").must_be_installed
     end
+
+    it "install ant" do
+      package("ant").must_be_installed
+    end
   end
 
   describe "files" do
